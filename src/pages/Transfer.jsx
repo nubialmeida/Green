@@ -35,6 +35,22 @@ export default function Transfer() {
         apiRequest();
     }, [navigate]);
 
+    function showDestiny() {
+        const user = allUsers.find(
+            ({ cpf }) =>
+                cpf.replaceAll(/\D/g, "") ===
+                destinyToTransfer.replaceAll(/\D/g, "")
+        );
+        return (
+            <div>
+                <span>
+                    <b>Para</b>
+                    {" " + user?.nome}
+                </span>
+            </div>
+        );
+    }
+
     return (
         <>
             {loading ? (
@@ -50,7 +66,10 @@ export default function Transfer() {
                                 );
                             else if (valueToTransfer < 0)
                                 alert("É preciso transferir um valor positivo");
-                            else setStage(2);
+                            else {
+                                setValueToTransfer(Number(valueToTransfer));
+                                setStage(2);
+                            }
                         }}
                         balance={userBalance}
                         valueToTransfer={valueToTransfer}
@@ -100,14 +119,17 @@ export default function Transfer() {
                             );
                         }}
                         backStage={() => setStage(2)}
+                        allUsers={allUsers}
                         valueToTransfer={valueToTransfer}
                         destinyToTransfer={destinyToTransfer}
+                        showDestiny={showDestiny()}
                     />
                     <Comprovant
                         className={stage === 4 ? "" : "hidden"}
                         lastTransaction={lastTransaction}
                         valueToTransfer={valueToTransfer}
                         destinyToTransfer={destinyToTransfer}
+                        showDestiny={showDestiny()}
                         setDefault={() => {
                             setDestinyToTransfer("");
                             setValueToTransfer();

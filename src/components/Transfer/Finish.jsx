@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import ASSETS from "../Assets";
 export default function Finish(props) {
     const navigate = useNavigate();
+
     return (
         <div className={`finish ${props.className ?? ""}`}>
             <img
@@ -22,10 +23,10 @@ export default function Finish(props) {
                         <b>R$ {props.valueToTransfer}</b>
                     </span>
                 </div>
-
-                <div className="reais">
+                {props.showDestiny}
+                <div>
                     <span>
-                        <b>Para</b>
+                        <b>CPF</b>
                         {" " + props.destinyToTransfer}
                     </span>
                 </div>

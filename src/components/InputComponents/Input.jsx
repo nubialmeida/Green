@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import InputMask from "react-input-mask";
 
 export default function InputComponent(props) {
-    const VALID_INPUT = /[a-zA-Zà-ýÀ-Ý0-9]/g;
+    const VALID_INPUT = /[a-zA-Zà-ýÀ-Ý0-9]/g; // Para verificar se não possui apenas caracteres da máscara
     const IS_ACTIVE = { TRUE: "active", FALSE: "" };
-    const [active, setActive] = useState(IS_ACTIVE.FALSE);
+    const [active, setActive] = useState(IS_ACTIVE.FALSE); // Ativar subida das letras de cada input
 
     let boxClass = ["input-area"];
     if (active) {

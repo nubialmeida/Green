@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Transactions from "../../components/Transactions";
-import TableHeader from "../Tables/Header";
-import TableLine from "../Tables/Body";
-import ASSETS from "../Assets";
-import Icons from "../Icons";
-import Card from "../Card";
-import News from "../News";
-import { formatDate } from "../../functions/format";
-import "../../styles/onboard.scss";
-import * as Cookie from "../../api/cookie";
+import Transactions from "./Transactions";
+import TableHeader from "./Tables/Header";
+import TableLine from "./Tables/Body";
+import ASSETS from "./Assets";
+import Icons from "./Icons";
+import Card from "./Card";
+import News from "./News";
+import { formatDate } from "../functions/format";
+import "../styles/onboard.scss";
+import * as Cookie from "../api/cookie";
 
 export default function OnboardComponent(props) {
+    // aciona modal que mostra todas as transações
     const [showTransactions, setShowTransactions] = useState(false);
     const navigate = useNavigate();
 
+    // ultimas cinco transações nas atividades recentes
     function renderTheFirstFive() {
         let resp = [];
         let len = props.userTransactions.length;
@@ -37,11 +39,12 @@ export default function OnboardComponent(props) {
 
     function logout() {
         if (window.confirm("Tem certeza que deseja sair?")) {
-            Cookie.eraseCookies();
-            navigate("/checkout");
+            Cookie.eraseCookies(); // apaga cookies de sessão
+            navigate("/landing-page");
         }
     }
 
+    // chamado do modal que mostra as transações do usuário
     return (
         <div className="onboard">
             {showTransactions ? (
@@ -92,16 +95,20 @@ export default function OnboardComponent(props) {
                                     text: "Dados pessoais",
                                     href: "/profile",
                                 },
-                            ].map(({ icon, text, href, clickFunction }) => (
-                                <Icons
-                                    key={text}
-                                    icon={icon}
-                                    alt={text}
-                                    href={href}
-                                    text={text}
-                                    generalFunction={clickFunction}
-                                />
-                            ))}
+                            ].map(
+                                (
+                                    { icon, text, href, clickFunction } // monta ícones laterais
+                                ) => (
+                                    <Icons
+                                        key={text}
+                                        icon={icon}
+                                        alt={text}
+                                        href={href}
+                                        text={text}
+                                        generalFunction={clickFunction}
+                                    />
+                                )
+                            )}
                         </ul>
                     </div>
 

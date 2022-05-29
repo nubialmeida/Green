@@ -22,20 +22,25 @@ export default function Comprovant(props) {
                 className="send"
                 alt="boneco do  futuro com cartão"
             />
-            <div>
+            <div className="data">
                 <h3 className="w-90">Pronto, enviamos sua transferência</h3>
-                <div>
-                    <span>
-                        <b>R$ {note.value}</b>
-                    </span>
+                <div className="inner">
+                    <div>
+                        <div>
+                            <span>
+                                <b>R$ {note.value}</b>
+                            </span>
+                        </div>
+                        {props.showDestiny}
+                        <div>
+                            <span>
+                                <b>CPF</b>
+                            </span>
+                            {" " + note.destiny}
+                        </div>
+                        <div>{date}</div>
+                    </div>
                 </div>
-                <div>
-                    <span>
-                        <b>Para</b>
-                    </span>
-                    {" " + note.destiny}
-                </div>
-                <div>{date}</div>
             </div>
         </div>
     );

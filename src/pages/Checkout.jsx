@@ -11,9 +11,9 @@ export default function Checkout() {
     const navigate = useNavigate();
     useEffect(() => {
         async function apiRequest() {
-            let cpf = Cookie.getCookie("cpf"); // checa sessao
+            let cpf = Cookie.getCookie("cpf"); // checa cookie do cpf
             if (cpf === undefined) {
-                const cookieEmail = Cookie.getCookie("email");
+                const cookieEmail = Cookie.getCookie("email"); // checa cookie do email
                 if (cookieEmail === undefined) alert("Seja Bem-Vindo(a)!");
                 else {
                     const allUsers = await API.getAllAccounts();
@@ -21,6 +21,7 @@ export default function Checkout() {
                         ({ email }) => email === cookieEmail
                     ).cpf;
                     Cookie.setCookie("cpf", cpf);
+                    navigate("/onboard");
                 }
             }
             if (cpf !== undefined) {
@@ -30,7 +31,7 @@ export default function Checkout() {
         apiRequest();
     }, [navigate]);
 
-    const [registerMode, toggleRegisterMode] = useState(false);
+    const [registerMode, toggleRegisterMode] = useState(false); // muda estado da tela de registro para login
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");
     const [userPhone, setUserPhone] = useState("");
@@ -42,12 +43,15 @@ export default function Checkout() {
         const resp = await API.loginAccount(userEmail, userPassword);
         if (resp.status === 200) {
             Cookie.setCookie("email", userEmail);
-            alert("Bem-vindo(a), ao Banco Green :)");
+            alert("Bem-vindo(a) novamente ao Banco Green :)");
             navigate("/onboard");
-        }
+        } else alert("Por favor revise seus dados, algum erro ocorreu :(");
     }
 
     async function createAccount() {
+        const allUsers = await API.getAllAccounts();
+        const existCpf = allUsers.find(({ email }) => email === userCpf).cpf;
+        if (existCpf) alert("Usuário já cadastrado");
         const resp = await API.createAccount(
             userName,
             userEmail,
@@ -58,11 +62,12 @@ export default function Checkout() {
         );
         if (resp.status === 201) {
             Cookie.setCookie("cpf", userCpf);
-            alert("Bem-vindo(a), ao Banco Green :)");
+            alert("Bem-vindo(a) ao Banco Green :)");
             navigate("/onboard");
-        }
+        } else alert("Por favor revise seus dados, algum erro ocorreu :(");
     }
 
+    // Esqueleto da página
     return (
         <div className="checkout-menu">
             <main className={registerMode ? "register-mode" : ""}>
