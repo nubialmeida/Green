@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+.transfer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Varela Round", sans-serif;
+    padding: 60px 160px;
+    background-color: #d1e782;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        color: #444;
+        b {
+            color: #87974d;
+        }
+    }
+
+    textarea,
+    input,
+    select {
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+        &:focus {
+            box-shadow: 0 0 0 0;
+            border: 0 none;
+            outline: 0;
+        }
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    > div {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 3.3rem;
+        box-shadow: 0 60px 40px -30px rgb(0, 0, 0, 0.27);
+        position: relative;
+        height: 80%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .back {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        cursor: pointer;
+    }
+
+    .close {
+        position: absolute;
+        top: 3.3rem;
+        right: 3.3rem;
+        font-weight: 700;
+        width: fit-content;
+        height: fit-content;
+        cursor: pointer;
+    }
+
+    .btn {
+        display: inline-block;
+        width: 50%;
+        height: 43px;
+        background-color: #87974d;
+        border: none;
+        cursor: pointer;
+        border-radius: 0.8rem;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: #a5bd51;
+        }
+    }
+
+    .next {
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        right: 5%;
+        bottom: 8%;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        border-bottom: 1px solid #444;
+        border-radius: 5px;
+        margin: 1rem 0;
+        width: 100%;
+        padding: 10px;
+        background-color: #4442;
+    }
+
+    .destiny {
+        form {
+            width: 50%;
+            position: relative;
+            select {
+                bottom: 0;
+                width: 100%;
+                position: absolute;
+            }
+        }
+    }
+
+    .cant-transfer {
+        color: rgba(214, 25, 25, 0.809);
+        font-weight: 600;
+        button {
+            margin-top: 1rem;
+        }
+    }
+
+    .finish {
+        .transfering {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            > div {
+                width: 100%;
+                margin: 0.8rem 0;
+            }
+        }
+    }
+
+    .comprovant {
+        .send {
+            height: 200px;
+            width: 200px;
+            border-radius: 10px;
+            position: absolute;
+            top: 9%;
+            left: 5%;
+        }
+
+        > div {
+            position: absolute;
+            top: 60%;
+            width: 90%;
+            text-align: center;
+            h3 {
+                text-align: left;
+                margin-bottom: 1rem;
+            }
+            > div {
+                margin: 0.8rem 0;
+            }
+        }
+    }
+}

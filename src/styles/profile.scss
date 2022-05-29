@@ -1,0 +1,41 @@
+h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    color: #444;
+}
+
+.profile-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #d1e782;
+    padding: 60px 160px;
+    // padding: 40px;
+    // height: 50px;
+    // width: 70px;
+}
+
+.profile {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 3.3rem;
+    box-shadow: 0 60px 40px -30px rgb(0, 0, 0, 0.27);
+}
+
+.img-back-profile {
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    &:hover {
+        color: #87974d;
+    }
+}

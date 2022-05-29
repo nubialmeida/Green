@@ -1,0 +1,32 @@
+:root {
+    --light-green: rgba(165, 189, 81);
+    --medium-green: rgb(135, 151, 77);
+}
+
+/*! Firefox */
+html {
+    scrollbar-color: var(scrollbarBG) var(--light-green);
+}
+
+/*! Other Browser */
+html::-webkit-scrollbar {
+    width: 11px;
+}
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--light-green) var(--medium-green);
+}
+html::-webkit-scrollbar-track {
+    background: var(--medium-green);
+}
+html::-webkit-scrollbar-thumb {
+    background-color: var(--light-green);
+    border-radius: 6px;
+    border: 3px solid var(--medium-green);
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+}

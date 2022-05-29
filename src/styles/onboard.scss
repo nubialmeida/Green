@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+    font-family: "Varela Round", sans-serif;
+}
+
+.onboard {
+    min-height: 100vh;
+    background: #d1e782;
+
+    * {
+        text-decoration: none !important;
+        color: #444;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .card-tittle {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-weight: bold !important;
+    }
+
+    .card-description {
+        color: rgba(100, 98, 98, 0.808);
+        font-size: 1.17em;
+
+        &.red {
+            color: rgba(214, 25, 25, 0.809);
+        }
+
+        &.green {
+            color: rgba(69, 150, 49, 0.809);
+        }
+    }
+
+    .button {
+        border-radius: 8px;
+        background-color: rgb(135, 151, 77);
+        color: #444;
+        padding: 5px 10px;
+        text-align: center;
+        transition: 0.3s;
+
+        &:hover {
+            color: rgba(165, 189, 81);
+            background: white;
+            border-radius: 5px;
+            padding: 3px 8px;
+            border: 2px solid #444;
+        }
+    }
+
+    .tittle {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 15px 10px;
+        border-bottom: 2px solid #999;
+    }
+
+    .inner-tittle {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    table {
+        padding: 10px;
+    }
+
+    .recent-info table {
+        margin-left: 10px;
+    }
+
+    th,
+    tr,
+    td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    td a {
+        color: #444 !important;
+    }
+
+    /* SIDE MENU SETTINGS */
+
+    .side-menu {
+        position: fixed;
+        background: rgb(135, 151, 77);
+        width: 20vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        .brand-name {
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        li {
+            font-size: 24px;
+            padding: 10px 40px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            * {
+                display: flex;
+                align-items: center;
+            }
+
+            &:hover {
+                background: white;
+
+                span {
+                    color: #339721;
+                }
+            }
+        }
+    }
+
+    .icon-menu {
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+    }
+
+    .icon-cards {
+        width: 80px;
+        height: 80px;
+        padding: 2px 5px;
+        margin: 0 10px;
+    }
+
+    /* Main Settings */
+
+    .main {
+        position: absolute;
+        right: 0;
+        width: 80vw;
+        height: 100vh;
+        background: #d1e782;
+
+        .header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 80vw;
+            height: 10vh;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+            .nav {
+                width: 90%;
+                display: flex;
+                align-items: center;
+
+                .search {
+                    flex: 3;
+                    display: flex;
+                    justify-content: center;
+
+                    input[type="text"] {
+                        outline: none;
+                        border: none;
+                        border-bottom: 1px solid black;
+                        border-radius: 5px;
+                        background-color: rgb(231, 231, 231);
+                        margin: 0;
+                        padding: 10px;
+                        width: 50%;
+                        height: 100%;
+                    }
+
+                    button {
+                        width: 40px;
+                        height: 40px;
+                        border: none;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+
+                .user {
+                    flex: 1;
+                }
+            }
+        }
+
+        .content {
+            position: relative;
+            margin-top: 10vh;
+            min-height: 90vh;
+            background: #d1e782;
+
+            .cards {
+                padding: 20px 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .card-item a {
+                    width: 300px;
+                    height: 150px;
+                    background-color: white;
+                    border-radius: 20px;
+                    margin: 20px 10px;
+                    padding: 20px 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .box * {
+        font-weight: bold;
+    }
+
+    /* Main Content Settings */
+
+    .main .content {
+        .content-2 {
+            min-height: 60vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            .recent-info {
+                min-height: 50vh;
+                flex: 5;
+                background: white;
+                margin: 0 25px 25px 25px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .more-info {
+                flex: 2;
+                background: white;
+                min-height: 50vh;
+                margin: 0 25px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                display: flex;
+                flex-direction: column;
+
+                /* ASIDE MENU SETTINGS */
+
+                table {
+                    td:nth-child(1) {
+                        height: 40px;
+                        width: 40px;
+                    }
+
+                    img {
+                        height: 40px;
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .transactions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 160px;
+
+        .content {
+            position: relative;
+            width: 80vw;
+            background: white;
+            padding: 40px;
+            border-radius: 3.3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+            .close {
+                position: absolute;
+                top: 3.3rem;
+                left: 3.3rem;
+                font-weight: 700;
+                cursor: pointer;
+            }
+
+            table {
+                width: 80%;
+            }
+        }
+    }
+
+    /* RESPONSIVE LAYOUT */
+
+    @media (max-width: 1050px) {
+        .side-menu li {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 940px) {
+        .side-menu li span {
+            display: none;
+        }
+
+        .side-menu {
+            align-items: center;
+        }
+
+        .side-menu li img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 536px) {
+        .brand-name .card-tittle {
+            font-size: 16px;
+        }
+
+        .main .content .cards {
+            justify-content: center;
+        }
+
+        .side-menu li img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .main .content .content-2 .recent-info table th:nth-child(2),
+        .main .content .content-2 .recent-info table td:nth-child(2) {
+            display: none;
+        }
+    }
+}
