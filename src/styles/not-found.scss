@@ -13,5 +13,58 @@
         padding: 40px;
         border-radius: 3.3rem;
         box-shadow: 0 60px 40px -30px rgb(0, 0, 0, 0.27);
+        width: 80%;
+        
     }
+
+    .not-found-image img {
+        
+        width: 400px;
+        height: 400px;
+        margin-left: 25%;
+        margin-bottom: 5px;
+    
+    }
+
+    .not-found-image h2 {
+        font-size: 25px;
+        color: #033822;
+        margin: auto;
+    }
+
+    .not-found-image p {
+        font-weight: 600;
+        
+    }
+
+   .p_error{
+       text-decoration: none;
+       color: #0e6b44;
+       transition: 0.3s;
+   }
+
+   .p_error:hover{
+       border: 1px solid #033822;
+       border-radius: 5px;
+       background-color: #033822;
+       color: #fff;
+       padding: 5px;
+   }
+
+   @media (max-width: 1020px) {
+    .not-found-image img{
+        width: 300px;
+        height: 300px;
+    }
+   }
+
+   @media (max-width: 850px){
+    .not-found-image img{
+        display: none;
+    }
+
+    .not-found-image h2{
+        margin-bottom: 20px;
+    }
+   }
 }

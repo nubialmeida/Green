@@ -65,7 +65,7 @@
 
             h2 {
                 color: #444;
-                font-size: 4em;
+                font-size: 3em;
                 line-height: 1.4em;
                 font-weight: 500;
             }
@@ -164,5 +164,50 @@
         height: 100%;
         background: #017143;
         clip-path: circle(600px at right 800px);
+    }
+    
+    /* RESPONSIVE LAYOUT */
+
+    @media (max-width: 790px) {
+        .logo {
+            display: none;
+        }
+        header{
+            margin: 0;
+            padding: 10px 0;
+        }
+        ul {
+            padding: 10px 0;
+        }
+
+        .content .textBox h2 {
+            font-size: 2.3em;
+            font-weight: 400;
+            text-align: justify;
+            
+            
+        }
+
+       
+        .circle {
+            top: 0;
+            width: 100%;
+            height: 100%;
+            margin-top: 30%;
+            background: #2eb47c;
+            clip-path: circle(600px at right 800px);
+        }
+
+        .imgBox img {
+            display: none;
+        }
+
+        .textBox button {
+            margin-bottom: 80px;
+        }
+
+        .social  {
+            margin-top: 80px;
+        }
     }
 }
