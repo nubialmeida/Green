@@ -30,3 +30,27 @@
         background-color: #d1e782;
     }
 }
+
+@media (max-width: 1090px) {
+    .problems-container {
+        padding: 30px 80px;
+    }
+}
+
+@media (max-width: 720px) {
+    .problems-container {
+        padding: 20px 60px;
+        .problems-login {
+            padding: 40px 60px;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .problems-container {
+        padding: 30px 30px;
+        .problems-login {
+            padding: 60px 30px;
+        }
+    }
+}

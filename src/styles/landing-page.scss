@@ -165,14 +165,14 @@
         background: #017143;
         clip-path: circle(600px at right 800px);
     }
-    
+
     /* RESPONSIVE LAYOUT */
 
     @media (max-width: 790px) {
         .logo {
             display: none;
         }
-        header{
+        header {
             margin: 0;
             padding: 10px 0;
         }
@@ -180,15 +180,18 @@
             padding: 10px 0;
         }
 
-        .content .textBox h2 {
-            font-size: 2.3em;
-            font-weight: 400;
-            text-align: justify;
-            
-            
+        .content .textBox {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 13px;
+            height: fit-content;
+            h2 {
+                font-size: 2.3em;
+                font-weight: 400;
+                text-align: justify;
+            }
         }
 
-       
         .circle {
             top: 0;
             width: 100%;
@@ -202,12 +205,20 @@
             display: none;
         }
 
-        .textBox button {
+        .textBox {
             margin-bottom: 80px;
         }
 
-        .social  {
+        .social {
             margin-top: 80px;
+        }
+    }
+    @media (max-width: 1090px) {
+        .content .textBox {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 13px;
+            height: fit-content;
         }
     }
 }
