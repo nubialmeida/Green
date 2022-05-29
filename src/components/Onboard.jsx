@@ -56,7 +56,7 @@ export default function OnboardComponent(props) {
                 <>
                     <div className="side-menu">
                         <div className="brand-name">
-                            <h1>Green</h1>
+                            <span>Green</span>
                         </div>
                         <ul>
                             {[

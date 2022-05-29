@@ -2,6 +2,7 @@
 
 * {
     font-family: "Varela Round", sans-serif;
+    box-sizing: border-box;
 }
 
 .onboard {
@@ -21,7 +22,7 @@
         font-size: 2em;
     }
 
-    h1 {
+    span {
         font-weight: bold !important;
     }
 
@@ -102,6 +103,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            span {
+                font-size: 2rem;
+            }
         }
 
         li {
@@ -327,9 +331,25 @@
         .side-menu li {
             font-size: 18px;
         }
+
+        .brand-name .card-tittle span {
+            font-size: 40px;
+        }
     }
 
     @media (max-width: 940px) {
+        .transactions {
+            padding: 20px;
+            .content {
+                padding: 20px;
+                width: 100%;
+            }
+        }
+
+        .side-menu .brand-name span {
+            font-size: 1.5rem;
+        }
+
         .side-menu li span {
             display: none;
         }
@@ -345,10 +365,20 @@
     }
 
     @media (max-width: 536px) {
-        .brand-name .card-tittle {
-            font-size: 16px;
+        .transactions {
+            padding: 20px;
+            .content {
+                padding: 80px 20px;
+                width: 100%;
+            }
         }
 
+        .side-menu .brand-name span {
+            font-size: 0px;
+        }
+        .card-item {
+            transform: scale(0.8);
+        }
         .main .content .cards {
             justify-content: center;
         }

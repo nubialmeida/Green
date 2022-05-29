@@ -182,3 +182,30 @@
         }
     }
 }
+
+@media (max-width: 960px) {
+    .transfer {
+        padding: 30px 80px;
+    }
+}
+
+@media (max-width: 745px) {
+    .transfer {
+        padding: 20px 60px;
+    }
+}
+
+@media (max-width: 536px) {
+    .transfer {
+        padding: 0px;
+        > div {
+            padding: 20px;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 30rem;
+            position: relative;
+            right: 40px;
+        }
+    }
+}
