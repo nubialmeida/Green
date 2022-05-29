@@ -1,11 +1,22 @@
 import React from "react";
 import "../styles/help.scss";
 import ASSETS from "../components/Assets";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Help() {
+    const navigate = useNavigate();
+
     return (
         <div className="help-container">
             <div className="chat">
+                <img
+                    src={ASSETS.IMAGES.back}
+                    alt="imagem de voltar a página"
+                    className="help-back"
+                    onClick={() => navigate(-1)}
+                />
+
                 <span>Chat</span>
                 <img src={ASSETS.IMAGES.chat} alt="chat" />
             </div>
@@ -17,21 +28,19 @@ export default function Help() {
                 <div className="content">
                     <ul className="social">
                         <li>
-                            <a
-                                href="https://facebook.com"
-                                rel="noreferrer"
-                                target="_blank"
-                            >
+                            <Link to="/landing-page">
                                 Como faço meu cadastro?
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <button>
+                            <Link to="/problems-login">
                                 Estou tendo problemas com meu login.
-                            </button>
+                            </Link>
                         </li>
                         <li>
-                            <button>Como navegar pela plataforma Green?</button>
+                            <Link to="/landing-page">
+                                Como navegar pela plataforma Green?
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -44,22 +53,18 @@ export default function Help() {
                 <div className="content">
                     <ul>
                         <li>
-                            <button>Como utilizar o Pix?</button>
+                            <Link to="/landing-page">Como utilizar o Pix?</Link>
                         </li>
                         <li>
-                            <button>
+                            <Link to="/landing-page">
                                 Quais formas de transferência eu tenho
                                 disponível na Green?
-                            </button>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="https://facebook.com"
-                                rel="noreferrer"
-                                target="_blank"
-                            >
+                            <Link to="/landing-page">
                                 Envio internacional, como fazer?
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

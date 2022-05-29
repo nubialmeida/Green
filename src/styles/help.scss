@@ -64,5 +64,14 @@
         img {
             width: 100%;
         }
+
+        .help-back {
+            height: 100px;
+            width: 100px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
     }
 }

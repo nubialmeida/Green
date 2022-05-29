@@ -4,6 +4,7 @@ import ASSETS from "../components/Assets";
 import Loading from "../components/Loading";
 import * as API from "../api";
 import * as Cookie from "../api/cookie";
+import { Link } from "react-router-dom";
 
 import "../styles/profile.scss";
 
@@ -42,19 +43,35 @@ export default function Profile() {
                             <h5>Perfil</h5>
                         </div>
                         <hr />
-                        <div>Nome {user?.nome} </div>
+                        <div>
+                            <strong> Nome: </strong>
+                            {user?.nome}{" "}
+                        </div>
                         <hr />
 
-                        <div>Email {user?.email} </div>
+                        <div>
+                            <strong> Email: </strong>
+                            {user?.email}{" "}
+                        </div>
                         <hr />
 
-                        <div>Telefone {user?.telefone}</div>
+                        <div>
+                            <strong>Telefone: </strong>
+                            {user?.telefone}
+                        </div>
                         <hr />
 
-                        <div>CPF {user?.cpf}</div>
+                        <div>
+                            <strong>CPF: </strong>
+                            {user?.cpf}
+                        </div>
                         <hr />
 
-                        <div>Consultar senha </div>
+                        <div>
+                            <strong>
+                                <Link to="/*">Consultar senha</Link>{" "}
+                            </strong>
+                        </div>
                     </div>
                 </div>
             )}

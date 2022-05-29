@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import ASSETS from "../components/Assets";
 import "../styles/terms-of-use.scss";
-// import "../components/InputComponents/Button";
 
 export default function TermsOfUse() {
     const navigate = useNavigate();

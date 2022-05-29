@@ -1,0 +1,32 @@
+.problems-container {
+    height: 100%;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #d1e782;
+    padding: 60px 160px;
+
+    .problems-login {
+        background-color: #fff;
+        padding: 80px 120px;
+        border-radius: 3.3rem;
+        box-shadow: 0 60px 40px -30px rgb(0, 0, 0, 0.27);
+        position: relative;
+    }
+    .close {
+        position: absolute;
+        top: 3.3rem;
+        right: 3.3rem;
+        font-weight: 700;
+        width: fit-content;
+        height: fit-content;
+        cursor: pointer;
+    }
+
+    h1 {
+        color: #444;
+    }
+
+    mark {
+        background-color: #d1e782;
+    }
+}
