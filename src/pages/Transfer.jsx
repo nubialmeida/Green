@@ -99,6 +99,7 @@ export default function Transfer() {
                         className={stage === 3 ? "" : "hidden"}
                         function={async () => {
                             setStage(4);
+                            //realiza transferencia
                             await API.createTransaction(
                                 Cookie.getCookie("cpf"),
                                 destinyToTransfer,

@@ -60,6 +60,7 @@ export default function OnboardComponent(props) {
                         </div>
                         <ul>
                             {[
+                                //icones da esquerda
                                 {
                                     icon: ASSETS.IMAGES.home,
                                     text: "Início",
@@ -178,7 +179,7 @@ export default function OnboardComponent(props) {
                                         <tbody>
                                             {/*Ultimas cinco transações*/}
                                             {renderTheFirstFive()}
-                                        </tbody>{" "}
+                                        </tbody>
                                     </table>
                                 </div>
                                 <div className="more-info">
