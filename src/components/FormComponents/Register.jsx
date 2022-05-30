@@ -60,12 +60,18 @@ export default function RegisterComponents(props) {
                     value={props.user.password}
                     onChange={props.setUserPassword}
                 />
-                <ButtonComponent
-                    id="register-btn"
-                    type="button"
-                    value="Cadastrar"
-                    onClick={props.createAccount}
-                />
+                {props.loading ? (
+                    <div className="btn">
+                        <img src={ASSETS.GIFS.loading} alt="loading" />
+                    </div>
+                ) : (
+                    <ButtonComponent
+                        id="register-btn"
+                        type="button"
+                        value="Cadastrar"
+                        onClick={props.createAccount}
+                    />
+                )}
                 <p className="text">
                     Eu concordo com os
                     <Link to="/terms-of-use"> Termos de Uso</Link>

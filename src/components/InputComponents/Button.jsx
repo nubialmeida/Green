@@ -7,7 +7,7 @@ export default function ButtonComponent(props) {
                 id={props.id}
                 type={props.type}
                 value={props.value}
-                className="login-btn"
+                className="btn"
                 onClick={props.onClick}
             />
         </>

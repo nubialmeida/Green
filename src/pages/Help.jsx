@@ -86,7 +86,7 @@ export default function Help() {
                             </a>
                         </li>
                         <li>
-                            <button>Entre em contato por telefone!</button>
+                            <span>Entre em contato por telefone!</span>
                         </li>
                         <li>
                             <a

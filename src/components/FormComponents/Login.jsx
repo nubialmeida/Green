@@ -35,12 +35,18 @@ export default function LoginComponents(props) {
                     onChange={props.setUserPassword}
                 />
 
-                <ButtonComponent
-                    id="login-btn"
-                    type="button"
-                    value="Login"
-                    onClick={props.loginAccount}
-                />
+                {props.loading ? (
+                    <div className="btn">
+                        <img src={ASSETS.GIFS.loading} alt="loading" />
+                    </div>
+                ) : (
+                    <ButtonComponent
+                        id="login-btn"
+                        type="button"
+                        value="Login"
+                        onClick={props.loginAccount}
+                    />
+                )}
                 <p className="text">
                     Esqueceu sua senha? Obtenha
                     <Link to="/help"> ajuda</Link> para entrar.

@@ -192,16 +192,16 @@ export default function OnboardComponent(props) {
                                             <News
                                                 img={ASSETS.IMAGES.heart}
                                                 alt="icone de coração e uma planta"
-                                                link="index.html"
+                                                link="/landing-page"
                                                 title="Projeto verde. Saiba como ajudar!"
                                             />
                                             <News
                                                 img={ASSETS.IMAGES.user_config}
                                                 className="w-50"
-                                                link="index.html"
+                                                link="/profile"
                                                 title='Go paperless! Atualize suas
-                                    configurações em "Dados Pessoais"
-                                    para tornar sua conta 100% digital.'
+                                                configurações em "Dados Pessoais"
+                                                para tornar sua conta 100% digital.'
                                             />
                                         </tbody>
                                     </table>

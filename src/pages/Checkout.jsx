@@ -38,22 +38,33 @@ export default function Checkout() {
     const [userDate, setUserDate] = useState("");
     const [userCpf, setUserCpf] = useState("");
     const [userPassword, setUserPassword] = useState("");
-
+    const [loading, setLoading] = useState(false);
     const emailRegex = RegExp(
         /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
     );
 
     async function loginAccount() {
+        setLoading(true);
+        const allUsers = await API.getAllAccounts();
+        const exist = allUsers.find(({ email }) => email === userEmail)?.email;
+        console.log(userEmail, userPassword);
+        if (!exist) {
+            setLoading(false);
+            alert("Usuário não cadastrado");
+            return;
+        }
         if (!userEmail || !userPassword || !emailRegex.test(userEmail)) {
+            setLoading(false);
             alert("Por favor preencha seus dados para fazer login");
             return;
         }
         const resp = await API.loginAccount(userEmail, userPassword);
-        if (resp.status === 200) {
+        if (resp && resp.status === 200) {
             Cookie.setCookie("email", userEmail);
             alert("Bem-vindo(a) novamente ao Banco Green :)");
             navigate("/onboard");
         } else alert("Por favor revise seus dados, algum erro ocorreu :(");
+        setLoading(false);
     }
 
     async function createAccount() {
@@ -140,6 +151,7 @@ export default function Checkout() {
                                 }
                                 changeScreen={() => toggleRegisterMode(true)}
                                 loginAccount={() => loginAccount()}
+                                loading={loading}
                             />
                             <Register
                                 user={{
@@ -164,6 +176,7 @@ export default function Checkout() {
                                 }
                                 changeScreen={() => toggleRegisterMode(false)}
                                 createAccount={() => createAccount()}
+                                loading={loading}
                             />
                         </div>
 
