@@ -20,9 +20,9 @@ export default function OnboardComponent(props) {
     function renderTheFirstFive() {
         let resp = [];
         let len = props.userTransactions.length;
-        let limit = len < 5 ? len : 5;
-        for (let i = 0; i < limit; i++) {
-            resp.push(props.userTransactions[i]);
+        let limit = len < 5 ? len : 5; // caso possua menos de cinco transações mostra as que possui
+        for (let i = 1; i <= limit; i++) {
+            resp.push(props.userTransactions[props.userTransactions.length - i]);
         }
         return resp.map(({ _id, tipo, valor, data }) => {
             let formatedDate = formatDate(data);
@@ -72,8 +72,7 @@ export default function OnboardComponent(props) {
                                 {
                                     icon: ASSETS.IMAGES.extract,
                                     text: "Extrato",
-                                    clickFunction: () =>
-                                        setShowTransactions(true),
+                                    clickFunction: () => setShowTransactions(true), // botão mostra transações
                                 },
                                 {
                                     icon: ASSETS.IMAGES.transfer,
@@ -128,7 +127,7 @@ export default function OnboardComponent(props) {
 
                                 <div className="user">
                                     <button
-                                        onClick={() => logout()}
+                                        onClick={() => logout()} // botão logout
                                         className="button"
                                     >
                                         Sair
@@ -164,12 +163,10 @@ export default function OnboardComponent(props) {
                             <div className="content-2">
                                 <div className="recent-info">
                                     <div className="tittle">
-                                        <div className="inner-tittle">
-                                            Atividades Recentes
-                                        </div>
+                                        <div className="inner-tittle">Atividades Recentes</div>
                                         <button
-                                            onClick={() =>
-                                                setShowTransactions(true)
+                                            onClick={
+                                                () => setShowTransactions(true) // botão mostra transações
                                             }
                                             className="button"
                                         >
@@ -178,14 +175,15 @@ export default function OnboardComponent(props) {
                                     </div>
                                     <table>
                                         <TableHeader />
-                                        <tbody>{renderTheFirstFive()}</tbody>
+                                        <tbody>
+                                            {/*Ultimas cinco transações*/}
+                                            {renderTheFirstFive()}
+                                        </tbody>{" "}
                                     </table>
                                 </div>
                                 <div className="more-info">
                                     <div className="tittle">
-                                        <div className="inner-tittle">
-                                            Fique por dentro!
-                                        </div>
+                                        <div className="inner-tittle">Fique por dentro!</div>
                                     </div>
                                     <table>
                                         <tbody>

@@ -32,19 +32,16 @@ export default function LandingPage() {
             <div className="content">
                 <div className="textBox">
                     <h2>
-                        A sustentabilidade é <br /> nosso{" "}
-                        <span>compromisso!</span>
+                        A sustentabilidade é <br /> nosso <span>compromisso!</span>
                     </h2>
                     <p>
-                        É cliente Green e quer nos ajudar nessa missão de tornar
-                        um mundo mais sustentável? Conheça o Projeto Verde!{" "}
-                        <br />
-                        Com a ajuda da nação Green, estamos fazendo a diferença
-                        na vida de milhares de pessoas. Nosso time já implantou
-                        mais de quinhentas hortas em comunidades ao redor do
-                        Brasil, além dos treinamentos e das mais de 500.000
-                        árvores plantadas em áreas de reflorestamento! Aqui na
-                        Green, o seu dinheiro é sempre verde!
+                        É cliente Green e quer nos ajudar nessa missão de tornar um mundo mais
+                        sustentável? Conheça o Projeto Verde! <br />
+                        Com a ajuda da nação Green, estamos fazendo a diferença na vida de milhares
+                        de pessoas. Nosso time já implantou mais de quinhentas hortas em comunidades
+                        ao redor do Brasil, além dos treinamentos e das mais de 500.000 árvores
+                        plantadas em áreas de reflorestamento! Aqui na Green, o seu dinheiro é
+                        sempre verde!
                     </p>
 
                     <button onClick={() => setModal(true)}>Saiba Mais</button>
@@ -60,10 +57,7 @@ export default function LandingPage() {
 
             <ul className="thumb">
                 <li>
-                    <img
-                        alt="sustentabilidade"
-                        src={ASSETS.IMAGES.credit_card}
-                    />
+                    <img alt="sustentabilidade" src={ASSETS.IMAGES.credit_card} />
                 </li>
                 <li>
                     <img alt="crescimento" src={ASSETS.IMAGES.sustentability} />
@@ -75,29 +69,17 @@ export default function LandingPage() {
 
             <ul className="social">
                 <li>
-                    <a
-                        href="https://facebook.com"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
+                    <a href="https://facebook.com" rel="noreferrer" target="_blank">
                         <img alt="facebook" src={ASSETS.IMAGES.facebook} />
                     </a>
                 </li>
                 <li>
-                    <a
-                        href="https://instagram.com"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
+                    <a href="https://instagram.com" rel="noreferrer" target="_blank">
                         <img alt="instagram" src={ASSETS.IMAGES.instagram} />
                     </a>
                 </li>
                 <li>
-                    <a
-                        href="https://twitter.com"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
+                    <a href="https://twitter.com" rel="noreferrer" target="_blank">
                         <img alt="twitter" src={ASSETS.IMAGES.twitter} />
                     </a>
                 </li>

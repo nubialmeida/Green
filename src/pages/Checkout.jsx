@@ -17,9 +17,7 @@ export default function Checkout() {
                 if (cookieEmail === undefined) return;
                 else {
                     const allUsers = await API.getAllAccounts();
-                    cpf = allUsers.find(
-                        ({ email }) => email === cookieEmail
-                    ).cpf;
+                    cpf = allUsers.find(({ email }) => email === cookieEmail).cpf;
                     Cookie.setCookie("cpf", cpf);
                     navigate("/onboard");
                 }
@@ -71,13 +69,9 @@ export default function Checkout() {
         const allUsers = await API.getAllAccounts();
         const existCpf = allUsers.find(({ cpf }) => cpf === userCpf)?.cpf;
         let canResgister = true;
-        const existEmail = allUsers.find(
-            ({ email }) => email === userEmail
-        )?.email;
+        const existEmail = allUsers.find(({ email }) => email === userEmail)?.email;
         if (existCpf) {
-            alert(
-                "Usuário com CPF já cadastrado, gostou mesmo do nosso banco heim?!"
-            );
+            alert("Usuário com CPF já cadastrado, gostou mesmo do nosso banco heim?!");
             canResgister = false;
         }
         const date = new Date(userDate);
@@ -88,9 +82,7 @@ export default function Checkout() {
             canResgister = false;
         }
         if (existEmail) {
-            alert(
-                "Usuário com Email já cadastrado, esqueceu a senha não foi? rs"
-            );
+            alert("Usuário com Email já cadastrado, esqueceu a senha não foi? rs");
             canResgister = false;
         }
         if (!userName) {
@@ -108,9 +100,7 @@ export default function Checkout() {
             canResgister = false;
         }
         if (!emailRegex.test(userEmail)) {
-            alert(
-                "Email não está em formato esperado, veja se  colocou o @ e o ."
-            );
+            alert("Email não está em formato esperado, veja se  colocou o @ e o .");
             canResgister = false;
         }
         if (canResgister) {
@@ -143,12 +133,8 @@ export default function Checkout() {
                                     email: userEmail,
                                     password: userPassword,
                                 }}
-                                setUserEmail={(e) =>
-                                    setUserEmail(e.target.value)
-                                }
-                                setUserPassword={(e) =>
-                                    setUserPassword(e.target.value)
-                                }
+                                setUserEmail={(e) => setUserEmail(e.target.value)}
+                                setUserPassword={(e) => setUserPassword(e.target.value)}
                                 changeScreen={() => toggleRegisterMode(true)}
                                 loginAccount={() => loginAccount()}
                                 loading={loading}
@@ -163,17 +149,11 @@ export default function Checkout() {
                                     cpf: userCpf,
                                 }}
                                 setUserName={(e) => setUserName(e.target.value)}
-                                setUserPassword={(e) =>
-                                    setUserPassword(e.target.value)
-                                }
+                                setUserPassword={(e) => setUserPassword(e.target.value)}
                                 setUserCpf={(e) => setUserCpf(e.target.value)}
                                 setUserDate={(e) => setUserDate(e.target.value)}
-                                setUserPhone={(e) =>
-                                    setUserPhone(e.target.value)
-                                }
-                                setUserEmail={(e) =>
-                                    setUserEmail(e.target.value)
-                                }
+                                setUserPhone={(e) => setUserPhone(e.target.value)}
+                                setUserEmail={(e) => setUserEmail(e.target.value)}
                                 changeScreen={() => toggleRegisterMode(false)}
                                 createAccount={() => createAccount()}
                                 loading={loading}

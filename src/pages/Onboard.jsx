@@ -44,6 +44,7 @@ export default function Onboard() {
             {loading ? (
                 <Loading />
             ) : (
+                // componente possui grande parte das interações
                 <OnboardComponent {...{ userBalance, userTransactions }} />
             )}
         </>

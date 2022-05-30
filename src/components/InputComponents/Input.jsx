@@ -19,11 +19,7 @@ export default function InputComponent(props) {
                 placeholder={props?.placeholder}
                 onChange={props.onChange}
                 onFocus={() => setActive(IS_ACTIVE.TRUE)}
-                onBlur={
-                    !VALID_INPUT.test(props.value)
-                        ? () => setActive(IS_ACTIVE.FALSE)
-                        : null
-                }
+                onBlur={!VALID_INPUT.test(props.value) ? () => setActive(IS_ACTIVE.FALSE) : null}
                 required
                 autoComplete="off"
                 className={boxClass.join(" ")}

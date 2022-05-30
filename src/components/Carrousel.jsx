@@ -21,18 +21,10 @@ export default function Carrousel() {
                     />
                 </CCarouselItem>
                 <CCarouselItem>
-                    <CImage
-                        className="d-block w-100"
-                        src={ASSETS.IMAGES.wallet}
-                        alt="slide 2"
-                    />
+                    <CImage className="d-block w-100" src={ASSETS.IMAGES.wallet} alt="slide 2" />
                 </CCarouselItem>
                 <CCarouselItem>
-                    <CImage
-                        className="d-block w-100"
-                        src={ASSETS.IMAGES.globe}
-                        alt="slide 3"
-                    />
+                    <CImage className="d-block w-100" src={ASSETS.IMAGES.globe} alt="slide 3" />
                 </CCarouselItem>
             </CCarousel>
             <div className="texts">

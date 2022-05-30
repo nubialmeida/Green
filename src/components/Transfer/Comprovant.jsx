@@ -17,11 +17,7 @@ export default function Comprovant(props) {
             <span className="close" onClick={() => navigate("/onboard")}>
                 X
             </span>
-            <img
-                src={ASSETS.GIFS.send}
-                className="send"
-                alt="boneco do  futuro com cartão"
-            />
+            <img src={ASSETS.GIFS.send} className="send" alt="boneco do  futuro com cartão" />
             <div className="data">
                 <h3 className="w-90">Pronto, enviamos sua transferência</h3>
                 <div className="inner">

@@ -5,15 +5,13 @@ import { useNavigate } from "react-router-dom";
 export default function Value(props) {
     const navigate = useNavigate();
 
+    // Verificação de saldo, menor que zero impede qualquer transferencia
     return (
         <div className={`value ${props.className ?? ""}`}>
             {props.balance.toFixed(2) < 0 ? (
                 <div className="cant-transfer">
                     <div>VOCÊ ESTÁ COM O SALDO NEGATIVO</div>
-                    <button
-                        className="btn w-100"
-                        onClick={() => navigate("/onboard")}
-                    >
+                    <button className="btn w-100" onClick={() => navigate("/onboard")}>
                         Voltar
                     </button>
                 </div>
@@ -24,8 +22,7 @@ export default function Value(props) {
                         X
                     </div>
                     <span>
-                        Saldo disponível em conta{" "}
-                        <b>R$ {props.balance.toFixed(2)}</b>
+                        Saldo disponível em conta <b>R$ {props.balance.toFixed(2)}</b>
                     </span>
                     <form className="d-flex flex-row align-items-center">
                         <div className="fs-3">R$</div>

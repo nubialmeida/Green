@@ -1,17 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import ASSETS from "../Assets";
+
 export default function Finish(props) {
     const navigate = useNavigate();
 
     return (
         <div className={`finish ${props.className ?? ""}`}>
-            <img
-                className="back"
-                onClick={props.backStage}
-                src={ASSETS.IMAGES.back}
-                alt="voltar"
-            />
+            <img className="back" onClick={props.backStage} src={ASSETS.IMAGES.back} alt="voltar" />
 
             <div className="close" onClick={() => navigate("/onboard")}>
                 X

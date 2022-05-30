@@ -28,19 +28,13 @@ export default function Help() {
                 <div className="content">
                     <ul className="social">
                         <li>
-                            <Link to="/landing-page">
-                                Como faço meu cadastro?
-                            </Link>
+                            <Link to="/landing-page">Como faço meu cadastro?</Link>
                         </li>
                         <li>
-                            <Link to="/problems-login">
-                                Estou tendo problemas com meu login.
-                            </Link>
+                            <Link to="/problems-login">Estou tendo problemas com meu login.</Link>
                         </li>
                         <li>
-                            <Link to="/landing-page">
-                                Como navegar pela plataforma Green?
-                            </Link>
+                            <Link to="/landing-page">Como navegar pela plataforma Green?</Link>
                         </li>
                     </ul>
                 </div>
@@ -57,14 +51,11 @@ export default function Help() {
                         </li>
                         <li>
                             <Link to="/landing-page">
-                                Quais formas de transferência eu tenho
-                                disponível na Green?
+                                Quais formas de transferência eu tenho disponível na Green?
                             </Link>
                         </li>
                         <li>
-                            <Link to="/landing-page">
-                                Envio internacional, como fazer?
-                            </Link>
+                            <Link to="/landing-page">Envio internacional, como fazer?</Link>
                         </li>
                     </ul>
                 </div>
@@ -89,11 +80,7 @@ export default function Help() {
                             <span>Entre em contato por telefone!</span>
                         </li>
                         <li>
-                            <a
-                                href="https://whatsapp.com"
-                                rel="noreferrer"
-                                target="_blank"
-                            >
+                            <a href="https://whatsapp.com" rel="noreferrer" target="_blank">
                                 WhatsApp!
                             </a>
                         </li>

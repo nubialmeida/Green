@@ -7,20 +7,14 @@ export default function Destiny(props) {
     const navigate = useNavigate();
     return (
         <div className={`destiny ${props.className ?? ""}`}>
-            <img
-                className="back"
-                onClick={props.backStage}
-                src={ASSETS.IMAGES.back}
-                alt="voltar"
-            />
+            <img className="back" onClick={props.backStage} src={ASSETS.IMAGES.back} alt="voltar" />
             <div className="close" onClick={() => navigate("/onboard")}>
                 X
             </div>
             <span>
                 <h3>
                     {" "}
-                    Para quem você quer transferir{" "}
-                    <b>R$ {props.valueToTransfer}</b>
+                    Para quem você quer transferir <b>R$ {props.valueToTransfer}</b>
                 </h3>
             </span>
             <form className="d-flex flex-row">
@@ -30,25 +24,18 @@ export default function Destiny(props) {
                     value={props.destinyToTransfer}
                     onChange={props.setDestinyToTransfer}
                 />
+                {/* quando o uauário digitar mais de 4 caracteres do cpf 
+                aparecerá para ele um select com os cpfs possívei para tranferencia
+                ao preencher completamente ele some*/}
                 {props.destinyToTransfer.replaceAll(/\D/g, "").length > 4 &&
                 props.destinyToTransfer.replaceAll(/\D/g, "").length < 11 ? (
-                    <select
-                        defaultValue={"default"}
-                        onChange={props.setDestinyToTransfer}
-                    >
+                    <select defaultValue={"default"} onChange={props.setDestinyToTransfer}>
                         <option key={"default"} value="default" disabled>
                             ---Selecione CPF---
                         </option>
                         {props.allUsers.map(({ cpf }) => {
                             let userCpf = cpf.replaceAll(/\D/g, "");
-                            if (
-                                userCpf.includes(
-                                    props.destinyToTransfer.replaceAll(
-                                        /\D/g,
-                                        ""
-                                    )
-                                )
-                            ) {
+                            if (userCpf.includes(props.destinyToTransfer.replaceAll(/\D/g, ""))) {
                                 return (
                                     <option key={userCpf} value={cpf}>
                                         {cpf}
@@ -59,7 +46,7 @@ export default function Destiny(props) {
                     </select>
                 ) : null}
             </form>
-            <button className="btn" onClick={props.function}>
+            <button className="btn mt-5" onClick={props.function}>
                 Transferir para este contato
             </button>
         </div>

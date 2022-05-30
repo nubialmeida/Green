@@ -14,9 +14,7 @@ export function cpf(value) {
     return value.length < 11;
 }
 
-const emailRegex = RegExp(
-    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-);
+const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 
 export function email(value) {
     return !emailRegex.test(value);

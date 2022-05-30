@@ -11,8 +11,12 @@ export default function NotFound() {
                 <h2>Oops! Não encontramos a página que você está procurando.</h2>
                 <img src={ASSETS.GIFS.error404} alt="error.404" />
                 <p>
-                    Não se preocupe, seus dados estão seguros com a gente. Enquanto trabalhamos para 
-                    resolver esse erro, que tal conhecer o nosso <Link className="p_error" to="/landing-page">Projeto Verde</Link>?
+                    Não se preocupe, seus dados estão seguros com a gente. Enquanto trabalhamos para
+                    resolver esse erro, que tal conhecer o nosso{" "}
+                    <Link className="p_error" to="/landing-page">
+                        Projeto Verde
+                    </Link>
+                    ?
                 </p>
             </div>
         </div>

@@ -31,28 +31,20 @@ export default function Cards() {
                         Saiba mais sobre <br /> nossos <span>cartões!</span>
                     </h2>
                     <p>
-                        Os cartões de crédito Green chegaram e você já pode
-                        garantir o seu verdinho! Na Green, você pode adquirir
-                        seu cartão sem burocracia. Solicite on-line e receba na
-                        sua casa. Simples, rápido e fácil assim, só na Green.
+                        Os cartões de crédito Green chegaram e você já pode garantir o seu verdinho!
+                        Na Green, você pode adquirir seu cartão sem burocracia. Solicite on-line e
+                        receba na sua casa. Simples, rápido e fácil assim, só na Green.
                     </p>
                     <button>Saiba Mais</button>
                 </div>
                 <div className="imgBox">
-                    <img
-                        className="cards"
-                        alt="sustentabiliade"
-                        src={ASSETS.IMAGES.credit_card}
-                    />
+                    <img className="cards" alt="sustentabiliade" src={ASSETS.IMAGES.credit_card} />
                 </div>
             </div>
 
             <ul className="thumb">
                 <li>
-                    <img
-                        alt="sustentabiliade"
-                        src={ASSETS.IMAGES.credit_card}
-                    />
+                    <img alt="sustentabiliade" src={ASSETS.IMAGES.credit_card} />
                 </li>
                 <li>
                     <img alt="crescimento" src={ASSETS.IMAGES.sustentability} />
@@ -64,29 +56,17 @@ export default function Cards() {
 
             <ul className="social">
                 <li>
-                    <a
-                        href="https://facebook.com"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
+                    <a href="https://facebook.com" rel="noreferrer" target="_blank">
                         <img alt="facebook" src={ASSETS.IMAGES.facebook} />
                     </a>
                 </li>
                 <li>
-                    <a
-                        href="https://instagram.com"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
+                    <a href="https://instagram.com" rel="noreferrer" target="_blank">
                         <img alt="instagram" src={ASSETS.IMAGES.instagram} />
                     </a>
                 </li>
                 <li>
-                    <a
-                        href="https://twitter.com"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
+                    <a href="https://twitter.com" rel="noreferrer" target="_blank">
                         <img alt="twitter" src={ASSETS.IMAGES.twitter} />
                     </a>
                 </li>
